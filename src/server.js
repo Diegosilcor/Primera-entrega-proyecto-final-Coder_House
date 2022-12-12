@@ -21,10 +21,10 @@ app.use('/api/productos', productosRouter)
 app.use('/api/carritos', carritosRouter)
 
 app.get('/', async (req, res)=>{
-    res.sendFile(path.resolve(__dirname, '../public/productos.html'))
+    res.sendFile(path.resolve(__dirname, '/src/contenedores/productos.html'))
 })
 app.get('/carrito', async (req, res)=>{
-    res.sendFile(path.resolve(__dirname, '../public/carrito.html'))
+    res.sendFile(path.resolve(__dirname, './contenedores/carrito.html'))
 })
 
 app.get('*', function (req, res) {
